@@ -1,9 +1,11 @@
 # Yafp
 
-ASP.NET Core + YARP-based library for implementing customizable forward proxy server.
+A toolkit for implementing forward proxy based on ASP.NET Core and YARP.
+
+It can be used to implement custom local proxies. For example, it is possible to create something like Fiddler.
 
 > [!IMPORTANT]
-> This project is a PoC and is not recommended for production use, but it works well for hobby use with customization.
+> **This project is a PoC and is not recommended for production use**, but it works well for hobby use with customization.
 > It can be used as a replacement for Titanium Web Proxy, etc.
 
 ## Architecture
@@ -53,6 +55,7 @@ Next, add the proxy port and certificate settings in appsettings.json. Here we s
   ...
 }
 ```
+`ca.key` and `ca.pem` are copied from `samples/ProxySample`.
 
 > [!WARNING]
 > To access HTTPS, the CA certificate must be trusted. It is recommended that you create and trust your own certificates in the steps described below.
