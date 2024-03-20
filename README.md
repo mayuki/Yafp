@@ -10,7 +10,7 @@ ASP.NET Core + YARP-based library for implementing customizable forward proxy se
 ![](docs/image-01.jpg)
 
 ## Demo (Blazor + Yafp)
-<video src="docs/video-01.mp4"></video>
+<video src="https://github.com/mayuki/Yafp/assets/9012/53ce5317-aa18-48ba-8fe4-47172da2933c"></video>
 
 ## Quick start
 
