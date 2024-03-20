@@ -1,0 +1,40 @@
+﻿@page "/"
+@using System.Text.RegularExpressions
+
+<PageTitle>Yafp + Blazor</PageTitle>
+
+<h1>Yafp + Blazor</h1>
+
+@if (_yafpProxyAddress is not null)
+{
+    <p>HTTP proxy is listening on: @_yafpProxyAddress.Address:@_yafpProxyAddress.Port</p>
+}
+
+<table>
+    <thead>
+    <tr>
+        <th>Timestamp</th>
+        <th>URI</th>
+        <th>StatusCode</th>
+        <th>Content-Type</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var requestResponse in _requestResponses)
+    {
+        <tr @key="requestResponse.Id">
+            <td>@requestResponse.Timestamp</td>
+            <td>@Regex.Replace(requestResponse.Url, "\\?.*", "")</td>
+            <td>@requestResponse.StatusCode</td>
+            <td>@requestResponse.ContentType</td>
+            <td>
+                @if (requestResponse.ContentType?.StartsWith("image/") ?? false)
+                {
+                    <img src="/_cache/@requestResponse.Url" style="max-width: 128px; max-height: 128px;"/>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

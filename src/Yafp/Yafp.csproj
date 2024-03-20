@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <VersionPrefix>0.1.0</VersionPrefix>
+        <!-- NuGet Package Information -->
+        <Description>ASP.NET Core + YARP-based forward proxy library.</Description>
+        <Authors>Mayuki Sawatari</Authors>
+        <Copyright>Copyright 2023-present Mayuki Sawatari</Copyright>
+        <PackageProjectUrl>https://github.com/mayuki/Yafp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/mayuki/Yafp</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Yarp.ReverseProxy" Version="2.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\README.md" Pack="true" PackagePath="/" />
+    </ItemGroup>
+
+</Project>
