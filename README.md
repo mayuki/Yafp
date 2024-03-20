@@ -55,7 +55,7 @@ Next, add the proxy port and certificate settings in appsettings.json. Here we s
   ...
 }
 ```
-`ca.key` and `ca.pem` are copied from `samples/ProxySample`.
+You need to copy `ca.key` and `ca.pem` from `samples/ProxySample`.
 
 > [!WARNING]
 > To access HTTPS, the CA certificate must be trusted. It is recommended that you create and trust your own certificates in the steps described below.
@@ -78,3 +78,6 @@ To trust a certificate in Windows, you can create a `.der` file with the followi
 ```bash
 openssl x509 -outform der -in ca.pem -out ca.der
 ```
+
+## License
+MIT License
