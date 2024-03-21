@@ -18,6 +18,11 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+        <PathMap>$(RepoRoot)=.</PathMap>
+    </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="Yarp.ReverseProxy" Version="2.1.0" />
     </ItemGroup>
@@ -29,5 +34,6 @@
     <ItemGroup>
       <None Include="..\..\README.md" Pack="true" PackagePath="/" />
     </ItemGroup>
+
 
 </Project>
