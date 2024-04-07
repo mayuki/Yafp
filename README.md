@@ -1,4 +1,4 @@
-# Yafp
+# Yafp - Yet Another Forward Proxy
 
 A toolkit for implementing forward proxy based on ASP.NET Core and YARP.
 
