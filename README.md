@@ -65,7 +65,7 @@ You need to copy `ca.key` and `ca.pem` from `samples/ProxySample`.
 
 Last, Set the browser's HTTP proxy port to `localhost:18080`.
 
-Now, launch the application, and if you can access `http://www.example.com/` from your browser, you are done. You should see YARP logs in your console.
+Now, launch the application, and if you can access `http://www.example.com/` from your browser. You can browse the web site and see YARP logs in your console.
 
 ### Create CA private key/certificate
 
